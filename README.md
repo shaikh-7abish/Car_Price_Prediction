@@ -13,7 +13,7 @@ The dataset used in this project was downloaded from <a href="https://www.kaggle
 - Data Cleaning:
 The first step is to remove duplicate/null values from the dataset.
 
-- Insights from Dataset, you can check <a href="#">Data Preprocessing</a> file.
+- Insights from Dataset, you can check <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app/data_preprocessing.ipynb">Data Preprocessing</a> file.
   - There are many duplicates values, we need to remove it
   - Mileage column has a "km" attached with it's value
   - Price column have very disturbed data
@@ -25,16 +25,16 @@ The first step is to remove duplicate/null values from the dataset.
   - Channge the values in 'Doors' column
   - Remove the 'Hydrogen' value from 'Fuel type' column
 
-- Some insights from the dataset <a href="#">Exploratory Data Analysis.</a>: 
+- Some insights from the dataset <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app/EDA.ipynb">Exploratory Data Analysis.</a>: 
 Some values are present very much in dataset like Sedan, Petrol, Automatic, Black, White.
 
-- <a href="#">Data preprocessing</a>:
+- <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app/EDA.ipynb">Data preprocessing</a>:
   - One Hot Encoder
   - Normalization
   - Train the data
 
-- <a href="#">ML Models</a>:
+- <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app/models.ipynb">ML Models</a>:
 In this section, different machine learning algorithms are used to predict price/target-variable. And the result of Random Forest Regressor is `R2 Score:  0.7742242930508028 , MAE:  0.3168989547306263` which is good. Later dumped it with pickle module for further usage.
 
-- <a href="#">Deployment of Pretrained Model</a>:
+- <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">Deployment of Pretrained Model</a>:
 Then we used Flask for deployment of our model in <a href="#">app.ipynb</a> and use it on <a href="#">webpage</a>
