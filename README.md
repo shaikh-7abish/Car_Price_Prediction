@@ -39,8 +39,9 @@ In this section, different machine learning algorithms are used to predict price
 - <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">Deployment of Pretrained Model</a>:
 Then we used Flask for deployment of our model in <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">app.ipynb</a> and use it on <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/templates/main.html">webpage</a>
 
-
-I recommend to install the following packages in the "carprice" environment
+## To use the Model
+- firstly unzip the `model.zip` file in  <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/models/model.zip">models</a> folder.
+- I recommend to install the following packages in the your anaconda environment
 
     - "flask" package : `pip install flask` command.
 
