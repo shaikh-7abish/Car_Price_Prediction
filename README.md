@@ -44,11 +44,11 @@ I recommend to install the following packages in the "carprice" environment
 
     - "flask" package : `pip install flask` command.
 
-    - "matplotlib" package : ` pip install matplotlib` command.
+    - "matplotlib" package : `pip install matplotlib` command.
     
-    - "seaborn" package : ` pip install seaborn` command.
+    - "seaborn" package : `pip install seaborn` command.
     
-    - "pickle" package : ` pip install pickle` command.
+    - "pickle" package : `pip install pickle` command.
 
     - "pandas" package : `pip install pandas` command.
 
