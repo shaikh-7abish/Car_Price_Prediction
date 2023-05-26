@@ -12,7 +12,6 @@ def classified(manufacturer,column):
 
 from werkzeug.wrappers import Request, Response
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
-import json
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
