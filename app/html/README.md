@@ -1,0 +1,1 @@
+- This folder consist of html variants for Data Preprocessing, Data Analysis, Models used for creating the model.
