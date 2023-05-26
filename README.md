@@ -57,4 +57,4 @@ Then we used Flask for deployment of our model in <a href="https://github.com/sh
 
     - "sklearn" package : `pip install sklearn` command
 
-Run the app.ipynb in the anaconda prompt / jupyter notebook using `python3 app.ipynb` then open the web-address displayed below.
+- Run the `app.ipynb` in the anaconda prompt / jupyter notebook using `python3 app.ipynb` then open the web-address displayed below.
