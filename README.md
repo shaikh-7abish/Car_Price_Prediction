@@ -38,3 +38,22 @@ In this section, different machine learning algorithms are used to predict price
 
 - <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">Deployment of Pretrained Model</a>:
 Then we used Flask for deployment of our model in <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">app.ipynb</a> and use it on <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/templates/main.html">webpage</a>
+
+
+I recommend to install the following packages in the "carprice" environment
+
+    - "flask" package : `pip install flask` command.
+
+    - "matplotlib" package : ` pip install matplotlib` command.
+    
+    - "seaborn" package : ` pip install seaborn` command.
+    
+    - "pickle" package : ` pip install pickle` command.
+
+    - "pandas" package : `pip install pandas` command.
+
+    - "numpy" package : `pip install numpy` command.
+
+    - "sklearn" package : `pip install sklearn` command
+
+Run the app.ipynb in the anaconda prompt / jupyter notebook using `python3 app.ipynb` then open the web-address displayed below.
