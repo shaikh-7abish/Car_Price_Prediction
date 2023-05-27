@@ -5,7 +5,8 @@
 - Data Preprocessing (Standardization or Normalization)
 - ML Models: Linear Regression, Ridge Regression, Lasso, Random Forest Regressor and XGBoost Regressor
 - Comparison of the performance of the models
-- Best Model Deployment as a Webpage.
+- Dumping the Model which gives Best Results
+- Loading Dumped Model to deploy on/as a Webpage.
 
 ### Some Key Concepts
 - The Data:
