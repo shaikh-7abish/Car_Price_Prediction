@@ -42,21 +42,15 @@ In this section, different machine learning algorithms are used to predict price
 Then we used Flask for deployment of our model in <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/app.ipynb">app.ipynb</a> and use it on <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/templates/main.html">webpage</a>
 
 ## To use the Model
-- firstly unzip the `model.zip` file in  <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/models/model.zip">models</a> folder.
+- first, Unzip the `model.zip` file in  <a href="https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/models/model.zip">models</a> folder.
 - I recommend to install the following packages in the your anaconda environment
 
-    - "flask" package : `pip install flask` command.
-
-    - "matplotlib" package : `pip install matplotlib` command.
-    
-    - "seaborn" package : `pip install seaborn` command.
-    
-    - "pickle" package : `pip install pickle` command.
-
-    - "pandas" package : `pip install pandas` command.
-
     - "numpy" package : `pip install numpy` command.
-
-    - "sklearn" package : `pip install sklearn` command
-
+    - "pandas" package : `pip install pandas` command.
+    - "matplotlib" package : `pip install matplotlib` command.
+    - "seaborn" package : `pip install seaborn` command.
+    - "pickle" package : `pip install pickle` command.
+    - "sklearn" package : `pip install sklearn` command.
+    - "flask" package : `pip install flask` command.
+   
 - Run the `app.ipynb` in the anaconda prompt / jupyter notebook using `python3 app.ipynb` then open the web-address displayed below.
