@@ -54,3 +54,4 @@ Then we used Flask for deployment of our model in <a href="https://github.com/sh
     - "flask" package : `pip install flask` command.
    
 - Run the `app.ipynb` in the anaconda prompt / jupyter notebook using `python3 app.ipynb` then open the web-address displayed below.
+- To get a step by step procedure check out <a href='https://github.com/shaikh-7abish/Car_Price_Prediction/blob/main/DESCRIPTION.md'>Description file</a>.
