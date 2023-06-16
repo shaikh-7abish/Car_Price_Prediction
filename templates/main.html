@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body class="mx-5 px-3 bg-secondary">
+    <header class="m-3 p-2 text-center card">
+        <h2 class="p-3 text-uppercase ">Car Price Prediction</h2>
+        <p class="text-justify">This is a Machine Learning Model trained with data available on kaggle.<br> This model
+            can help people buy or sell second hand car's as it shows them there market value. </p>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dpa" target="_blank">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eda" target="_blank">EDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="model" target="_blank">Models</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="m-3 p-5 card">
+        <ul>
+            <li>Data downloading from <a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge" target="_blank">Kaggle</a></li>
+            <li>Perform data cleaning and pre-processing, and saved in <a href="../app/html/Data_preprocessing.html" target="_blank">DATA PREPROCESSING</a></li>
+            <li>Perform exploratory data analysis on the given dataset, and saved in <a href="../app/html/EDA.html" target="_blank">EDA</a></li>
+            <li>Train Some Machine Learning Models and evaluate it using different metrics, and saved in <a href="../app/html/models.html" target="_blank"></a></li>
+            <li>Model deployment on Webpage using <a href="../app.ipynb" target="_blank">Flask</a>.</li>
+        </ul>
+
+        <h6 class="font-weight-bold">Dataset Description</h6>
+        <p><a href="https://www.kaggle.com/datasets/deepcontractor/car-price-prediction-challenge" target="_blank">CSV
+                file</a> - 19237 rows x 18 columns (Includes Price Columns as Target)</p>
+
+        <div class="">
+            <h6 class="font-weight-bold">Attributes</h6>
+            <ul>
+                <li class="text-left">ID</li>
+                <li>Price: price of the care(Target Column)</li>
+                <li>Levy</li>
+                <li>Manufacturer</li>
+                <li>Model</li>
+                <li>Prod. year</li>
+                <li>Category</li>
+                <li>Leather interior</li>
+                <li>Fuel type</li>
+                <li>Engine volume</li>
+                <li>Mileage</li>
+                <li>Cylinders</li>
+                <li>Gear box type</li>
+                <li>Drive wheels</li>
+                <li>Doors</li>
+                <li>Wheel</li>
+                <li>Color</li>
+                <li>Airbags</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <form action="http://localhost:9000/home" method="post" id="form2" class="m-3 p-5 card">
+        <h5>select manufacturer</h5>
+        <select class="form-select" name="manufacturer" id="manufacturer">
+            {% for manufacturer in manufacturers %}
+            <option value="{{  manufacturer  }}">{{ manufacturer }}</option>
+            {% endfor %}
+        </select>
+
+        <div class="m-4 d-flex">
+            <button type="submit" form="form2" value="Submit" class="btn btn-outline-dark mx-auto">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

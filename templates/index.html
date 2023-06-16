@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body class="mx-5 px-3 bg-secondary">
+    <header class="m-3 p-2 text-center card border-info">
+        <h2 class="p-3 text-uppercase ">Car Price Prediction</h2>
+    
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dpa" target="_blank">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eda" target="_blank">EDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="model" target="_blank">Models</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <form action="http://localhost:9000/result" method="post" id="form1" class="m-3 p-2 card border-info">
+        <p class="text-warning p-3">*Every field is required for a Successfull Prediction</p>
+
+        <div class="form-group d-flex">
+            <div class="levy m-3 w-50">
+                <h4>Levy</h4>
+                <input type=" number" name="levy" placeholder="896" class="form-control w-100" required>
+            </div>
+
+            <div class="prod m-3 w-50">
+                <h4>Prod. year</h4>
+                <select class="form-select" name="prod" id="prod"  required>
+                    {% for pro in prod %}
+                    <option value="{{  pro  }}">{{ pro }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="Category m-3 flex-fill">
+                <h4>Category</h4>
+                <select class="form-select " name="category" id="category">
+                    {% for category in categories %}
+                    <option value="{{  category  }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="Leather mx-5 p-2 flex-sm-fill">
+                <h4>Leather Interior</h4>
+                <div class="form-check-inline">
+                    <input type="radio" name="leather" id="Yes" value="Yes" class="form-check-input">
+                    <label for="Yes" class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="leather" id="No" value="No" class="form-check-input">
+                    <label for="No" class="form-check-label">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="fuel m-3 flex-fill">
+                <h4 for="cars">Fuel type</h4>
+                <div class="input-group">
+                    <select class="form-select" id="gearselect" name="fuel">
+                        <option selected>Choose...</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="LPG">LPG</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="eng m-3 flex-fill">
+                <h4>Engine volume</h4>
+                <input type="number" name="volume" placeholder="3.6" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="d-flex">
+           
+
+            <div class="mile m-3 flex-fill">
+                <h4>Mileage</h4>
+                <input type="number" name="mileage" placeholder="112000" class="form-control" required>
+            </div>
+
+            <div class="cylinder m-3 flex-fill">
+                <h4>Cylinders</h4>
+                <select class="form-select" name="cylinder" id="Cylinders">
+                    {% for cylinder in cylinders %}
+                    <option value="{{  cylinder  }}">{{ cylinder }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="gear m-3 flex-sm-fill w-25">
+                <h4 for="Gear box type">Gear Box Type</h4>
+                <div class="input-group">
+                    <select class="form-select" id="gearselect" name="gear">
+                        <option selected>Choose...</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Tiptronic">Tiptronic</option>
+                        <option value="Variator">Variator</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="drive m-3 p-2 flex-fill">
+                <h4>Drive wheels</h4>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="Drive" id="Four" value="Four" class="form-check-input">
+                    <label for="Four" class="form-check-label">Four</label></input>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="Drive" id="FRont" value="Front" class="form-check-input">
+                    <label for="Front" class="form-check-label">Front</label></input>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="Drive" id="Rear" value="Rear" class="form-check-input">
+                    <label for="Rear" class="form-check-label">Rear</label></input>
+                </div>
+            </div>
+
+            <div class="door m-3 p-2 flex-sm-fill">
+                <h4>Doors</h4>
+                <div class="form-check-inline">
+                    <input type="radio" name="Doors" value="4" class="form-check-input">
+                    <label for="4" class="form-check-label">4</label></input>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="Doors" value="2" class="form-check-input">
+                    <label for="2" class="form-check-label">2</label></input>
+                </div>
+            </div>
+
+            <div class="wheel m-3 p-2 flex-fill">
+                <h4>Wheel Drive</h4>
+                <div class="form-check-inline">
+                    <input type="radio" name="Wheel" value="Left wheel" class="form-check-input">
+                    <label for="Left wheel" class="form-check-label">Left wheel</label></input>
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="Wheel" value="Right-hand drive" class="form-check-input">
+                    <label for="Right-hand drive" class="form-check-label">Right-hand drive</label></input>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="color m-3 flex-lg-fill">
+                <h4>Color</h4>
+                <select class="form-select" name="color" id="color">
+                    {% for color in colors %}
+                    <option value="{{  color  }}">{{ color }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="air m-3 flex-sm-fill">
+                <h4>Airbags</h4>
+                <select class="form-select" name="airbag" id="airbag">
+                    {% for airbag in airbags %}
+                    <option value="{{  airbag  }}">{{ airbag }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="m-2 d-flex">
+        <button type="submit" form="form1" value="Submit" class="btn btn-outline-light mx-auto">View
+            Result</button>
+    </div>
+
+    <div class="card m-3"></div>
+
+</body>
+
+<footer class="bg-dark text-white card">
+    <div>
+        <p class="text-center mt-2">created by -- Md Tabish Shaikh</p>
+    </div>
+</footer>
+
+</html>
